@@ -18,6 +18,8 @@ gem "mini_magick", "4.5.1"
 gem "fog", "1.38.0"
 gem "faker"
 gem "pry-rails"
+gem "devise"
+gem "config"
 group :development, :test do
   gem "byebug", platform: :mri
   gem "sqlite3"
