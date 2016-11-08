@@ -1,0 +1,76 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to root_path do %>
+        <%= image_tag "logo.png", class: "logo" %>
+      <% end %>
+    </div>
+    <div class="collapse navbar-collapse navbar-custom"
+      id="bs-example-navbar-collapse-1">
+          <% if user_signed_in? %>
+          <ul class="nav navbar-nav navbar-right">
+         <li class="dropdown">
+          <%= link_to "" do %>
+            <i class="fa fa-graduation-cap" aria-hidden="true">
+              <%= t("Courses") %>
+            </i>
+          <% end %>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+            role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-bell-o" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="header"><%= t "header.noti" %></li>
+            <div class="scroll">
+              <li>
+                <%= link_to root_path do %>
+                  <%= image_tag "logo.png", class: "imgcourse" %>
+                <% end %>
+                <p class="noti_course"></p>
+              </li>
+              <li role="separator" class="divider"></li>
+            </div>
+            <li><%= link_to t("view_all"), root_path %></li>
+          </ul>
+        </li>
+          <li class="user-name"><%= current_user.name %></li>
+          <li class="dropdown avatar-dropdown">
+            <%= image_tag "avatar3.png", class: "img-circle avatar",
+              data: {toggle: "dropdown"},
+              aria: {haspopup: "true", expanded: "true"} %>
+            <ul class="dropdown-menu box_profile">
+                <li class="user-header">
+                  <%= image_tag "logo.png", class: "img-circle img_profile" %>
+                  <p class="name_box_profile"><%= current_user.name %></p>
+                  <div class="col-xs-4 col-xs-offset-4">
+                    <div class="switch-role">
+                      <button class="btn btn-warning">
+                        <%= current_user.role.capitalize %>
+                        <span class="caret"></span>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+                <li class="user-footer">
+                  <div class="col-xs-4 pull-left">
+                    <%= link_to t("account_profile"), "#",
+                      class: "btn btn-default btn-flat" %>
+                  </div>
+                  <div class="col-xs-4 pull-right">
+                    <%= link_to t("signout"), destroy_user_session_path,
+                      method: :delete, class: "btn btn-default btn-flat" %>
+                  </div>
+                </li>
+              </ul>
+          </li>
+        <% else %>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to t("signin_button"), new_user_session_path %></li>
+          </ul>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>

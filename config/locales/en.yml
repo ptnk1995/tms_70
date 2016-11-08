@@ -22,7 +22,7 @@
 en:
   hello: "Hello world"
   aplication:
-    title: "Education"
+    title: "Framgia Training Management System"
   public:
     404p1: "The page you were looking for doesn't exist (404)"
     404p2: "The page you were looking for doesn't exist."
@@ -35,3 +35,63 @@ en:
     500p1: "We're sorry, but something went wrong (500)"
     500p2: "We're sorry, but something went wrong."
     500p3: "If you are the application owner check the logs for more information."
+  signin_button: "Sign in"
+  account_profile: "Profile"
+  signout: "Logout"
+  company: "FramgiaVietNam"
+  header:
+    noti: "New notifications"
+  footer:
+    menu:
+      home: "Home |"
+      blog: "Blog |"
+      about: "About |"
+      faq: "Faq |"
+      contact: "Contact |"
+    company-name: "Copyright 2016 Framgia, Inc. All rights reserved."
+    address: "13F Keangnam Landmark 72 Tower, Plot E6, Pham Hung Road,
+    Nam Tu Liem, Ha Noi, Viet Nam"
+    phone: "84-4-3795-5417"
+    email: "hr_team@framgia.com"
+    introduce: "About Framgia Viet Nam"
+    description: "Framgia Vietnam is a company 100% Japan funded specializing
+    in design, development applications such as mobile phone software, games,
+    social and website applications."
+  social:
+    facebook: "https://www.facebook.com/FramgiaVietnam"
+    github: "https://github.com/framgia/"
+    link: "https://www.linkedin.com/company/3341218?trk=tyah&amp;
+      trkInfo=clickedVertical%3Acompany%2CclickedEntityId%
+      3A3341218%2Cidx%3A2-1-2%2CtarId%3A1465497556522%2Ctas%3Aframgia%20vietnam"
+  right:
+    member: "Members"
+  home:
+    introduce: "learn more. faster."
+    description: "FREE classes for experienced engineers"
+    training: "Our Training Principles"
+    introduce_training: "We want to work with the most dedicated startup
+      engineers and designers. We want to help you become the best you can be,
+      alongside talented peers."
+    tutorial:
+      title: "Read Tutorials"
+      description: "We'll learn how apps like Facebook, Instagram, and Twitter
+        are built."
+    project1:
+      title: "Project 1"
+      description: "You'll be learning and working with the best."
+    project2:
+      title: "Project 2"
+      description: "You'll build real apps you'll be proud to show to customers
+        and employers."
+  development:
+    title: "Developing Developers"
+    description: "Master new skills in programming, design and product
+      building."
+  cousers: "Courses"
+  complete: "Completed"
+  trainees: "Trainees"
+  learning: "Learning"
+  manage: "Manage"
+  number: "37"
+  basic: "Basic"
+  advance: "Advance"
