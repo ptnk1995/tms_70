@@ -20,6 +20,10 @@ gem "fog", "1.38.0"
 gem "faker"
 gem "pry-rails"
 gem "devise"
+gem "kaminari"
+gem "ransack"
+gem "bootstrap-kaminari-views"
+gem "cancancan"
 group :development, :test do
   gem "byebug", platform: :mri
   gem "sqlite3"
