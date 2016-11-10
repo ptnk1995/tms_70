@@ -125,3 +125,7 @@ en:
       status_0: "Active"
       status_1: "Inprogress"
       new_button: "New"
+  login: "Please Login"
+  btn_login: "Login"
+  email: "Email"
+  password: "Password"

@@ -26,7 +26,8 @@
   width: 57px;
   height: 55px;
 }
-.header{
+
+.header {
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 0;
@@ -346,4 +347,7 @@
   margin-left: 62px;
   color: gray;
   font-size: 12px;
+}
+.form-control {
+  border-radius: 0 !important;
 }
