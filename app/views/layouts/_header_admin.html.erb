@@ -1,0 +1,119 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <%= link_to admin_root_path do %>
+        <%= image_tag "logo.png", class: "logo" %>
+      <% end %>
+    </div>
+    <div class="collapse navbar-collapse navbar-custom"
+      id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+            role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-bell-o" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="header"><%= t "admin.header.noti" %></li>
+            <div class="scroll">
+              <li>
+                <%= link_to admin_root_path do %>
+                  <%= image_tag "logo.png", class: "imgcourse" %>
+                <% end %>
+                <p><%= t "admin.header.date" %></p>
+              </li>
+              <li role="separator" class="divider"></li>
+            </div>
+            <li><%= link_to t("view_all"), admin_root_path %></li>
+          </ul>
+        </li>
+        <li class="dropdown hidden-phone">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+            role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu">
+            <li class="header"><%= t "admin.header.noti" %></li>
+            <div class="scroll">
+              <li>
+                <%= link_to admin_root_path do %>
+                  <%= image_tag "logo.png", class: "imgcourse" %>
+                <% end %>
+                <p><%= t "admin.header.date" %></p>
+              </li>
+              <li role="separator" class="divider"></li>
+            </div>
+            <li><%= link_to t("view_all"), admin_root_path %></li>
+          </ul>
+        </li>
+        <li class="dropdown hidden-phone">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+            role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
+          <ul class="dropdown-menu messages">
+            <li class="dropdown-menu-title">
+              <span><%= t "admin.header.notice_messages" %></span>
+              <a href="#refresh"><i class="fa fa-repeat"></i></a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="avatar">
+                  <%= image_tag "logo.png", class: "imgcourse" %>
+                </span>
+                <span class="header">
+                  <span class="from">
+                    <%= t "admin.header.username" %>
+                  </span>
+                  <span class="time">
+                    <%= t "admin.header.timeago" %>
+                  </span>
+                </span>
+                <span class="message">
+                  <%= t "admin.header.message" %>
+                </span>
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-menu-sub-footer">
+                <%= t "admin.header.view_messages" %>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="user-name"><%= t "username" %></li>
+        <li class="dropdown avatar-dropdown">
+          <%= image_tag "admin/avatar3.png", class: "img-circle avatar",
+            data: {toggle: "dropdown"},
+            aria: {haspopup: "true", expanded: "true"} %>
+          <ul class="dropdown-menu box_profile">
+            <li class="user-header">
+              <%= image_tag "logo.png", class: "img-circle img_profile" %>
+              <p class="name_box_profile"><%= t "username" %></p>
+              <div class="col-xs-4 col-xs-offset-4">
+                <div class="switch-role">
+                  <button class="btn btn-warning">
+                    <%= t "username" %>
+                    <span class="caret"></span>
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="user-footer">
+              <div class="col-xs-4 pull-left">
+                <%= link_to t("account_profile"), "#", class: "btn btn-default btn-flat" %>
+              </div>
+              <div class="col-xs-4 pull-right">
+                <%= link_to t("signout"), "#",
+                  class: "btn btn-default btn-flat" %>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to t("signin_button"), "#" %></li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+</nav>

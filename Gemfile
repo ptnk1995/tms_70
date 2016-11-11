@@ -1,5 +1,6 @@
 source "https://rubygems.org"
 
+gem "font-awesome-rails"
 gem "rails", "~> 5.0.0", ">= 5.0.0.1"
 gem "bcrypt", "3.1.11"
 gem "bootstrap-sass", "3.2.0.0"
@@ -19,7 +20,6 @@ gem "fog", "1.38.0"
 gem "faker"
 gem "pry-rails"
 gem "devise"
-gem "config"
 group :development, :test do
   gem "byebug", platform: :mri
   gem "sqlite3"
