@@ -1,0 +1,46 @@
+<div class="body_wrapper container body-wrapper-content">
+  <div id="user-course-show">
+    <div class="col-md-9">
+      <div class="breadcrumb-bar">
+        <ul class="breadcrumb">
+          <li>
+            <%= link_to root_path do %>
+              <i class="glyphicon glyphicon-th-list"> <%= t "path" %></i>
+            <% end %>
+          </li>
+          <li><%= link_to t("all_courses"), user_courses_path %></li>
+          <li class="active"><%= @user_course.course_name %></li>
+        </ul>
+      </div>
+      <span class="header-title"><%= @user_course.course_name %></span>
+      <span class="label-status <%= show_status @user_course %>-background-color">
+        <%= @user_course.status %>
+      </span>
+      <div class="subject-list">
+        <% @subjects.each do |subject| %>
+          <div class="subject col-xs-11 row">
+            <div class="col-xs-2 subject-image">
+              <%= image_tag "#{subject.image}",
+                class: "img-circle imglstcourse" %>
+            </div>
+            <div class="col-xs-10 infor">
+              <div>
+                <span class="subject-name">
+                  <%= link_to subject.name, "#" %>
+                </span>&nbsp;
+                <span>
+                  <i><%= subject.duaration %> <%= t "days" %></i>
+                </span>
+              </div>
+              <div>
+                <%= t "start_date" %>
+                <%= l @course.start_date, format: :short %>
+              </div>
+              <div><%= subject.description %></div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

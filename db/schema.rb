@@ -34,12 +34,12 @@ ActiveRecord::Schema.define(version: 20161114062615) do
   create_table "courses", force: :cascade do |t|
     t.string   "name"
     t.string   "description"
-    t.integer  "status"
+    t.integer  "status",      default: 0
     t.string   "image"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "subjects", force: :cascade do |t|
@@ -63,9 +63,9 @@ ActiveRecord::Schema.define(version: 20161114062615) do
   create_table "user_courses", force: :cascade do |t|
     t.integer  "course_id"
     t.integer  "user_id"
-    t.integer  "status"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "status",     default: 0
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
     t.datetime "start_date"
     t.datetime "end_date"
     t.index ["course_id"], name: "index_user_courses_on_course_id"

@@ -162,3 +162,18 @@ en:
       name_placeholder: "Type name for Subject in here..."
       task_name_placeholder: "Type name for Task in here..."
       task_description_placeholder: "Type description for Task in here..."
+  login: "Please Login"
+  btn_login: "Login"
+  email: "Email"
+  password: "Password"
+  all_courses: "All courses"
+  path: "Paths"
+  time:
+    formats:
+      short: "%Y-%m-%d"
+  days: "days"
+  start_date: "Start date"
+  status:
+    progress: "progress"
+    pending: "pending"
+    finished: "finished"

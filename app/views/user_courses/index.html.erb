@@ -1,0 +1,43 @@
+<div class="body_wrapper container body-wrapper-content">
+  <div id="user-course-index">
+    <div class="breadcrumb-bar">
+      <ul class="list breadcrumb">
+        <li>
+          <%= link_to root_path do %>
+            <i class="glyphicon glyphicon-th-list"><%= t "path" %></i>
+          <% end %>
+        </li>
+        <li class="active"><%= t "all_courses" %></li>
+      </ul>
+    </div>
+    <%= paginate @user_courses, theme: "twitter-bootstrap-3" %>
+    <div class="row">
+      <% @user_courses.each do |user_course| %>
+        <div class="col-md-6">
+          <div class="card">
+            <%= link_to user_course do %>
+              <div class="bucket">
+                <div class="bucket-media">
+                  <div class="badge">
+                    <%= image_tag "#{user_course.course.image}",
+                      class: "img-circle imglstcourse" %>
+                  </div>
+                </div>
+                <div class="bucket-content">
+                  <span class="course-name">
+                    <%= user_course.course_name.truncate(
+                      Settings.length_name_user_course) %>
+                  </span>
+                  <span class="label-status
+                    <%= show_status user_course %>-background-color">
+                    <%= user_course.status %>
+                  </span>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
