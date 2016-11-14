@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161103162813) do
+ActiveRecord::Schema.define(version: 20161114062615) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20161103162813) do
     t.string   "image"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "duaration"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -65,6 +66,8 @@ ActiveRecord::Schema.define(version: 20161103162813) do
     t.integer  "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.datetime "start_date"
+    t.datetime "end_date"
     t.index ["course_id"], name: "index_user_courses_on_course_id"
     t.index ["user_id"], name: "index_user_courses_on_user_id"
   end
@@ -78,6 +81,7 @@ ActiveRecord::Schema.define(version: 20161103162813) do
     t.datetime "end_date"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.datetime "start_date"
     t.index ["subject_id"], name: "index_user_subjects_on_subject_id"
     t.index ["user_course_id"], name: "index_user_subjects_on_user_course_id"
     t.index ["user_id"], name: "index_user_subjects_on_user_id"
