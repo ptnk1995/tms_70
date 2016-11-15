@@ -27,7 +27,7 @@ include CarrierWave::MiniMagick
   end
 
   def default_url
-    "images/admin/avatar3.png"
+    "/assets/" + [version_name, "avatar3.png"].compact.join('_')
   end
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
